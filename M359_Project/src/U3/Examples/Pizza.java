@@ -10,6 +10,19 @@ public class Pizza {
         this.price = price;
         this.numSlices = numSlices;
     }
+    //the pizzas are equal if they have the same price
+    //and the same toppings
+    //equals method always returns a boolean
+    //ALWAYS has one parameter of this class (pizza)
+    public boolean equals(Pizza other) {
+        if (this.getToppings().equals(other.getToppings()) &&
+                this.getPrice() == other.getPrice()) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 
     public String getToppings() {
         return toppings;
