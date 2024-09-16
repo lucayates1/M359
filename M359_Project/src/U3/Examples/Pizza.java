@@ -23,6 +23,29 @@ public class Pizza {
             return false;
         }
     }
+    /*
+    the toString method ALWAYS returns a string and
+    takes NO parameters
+    when toString method exists, Java will call this method for oyu whenever you print a pizza reference
+    variable. otherwise all that we see is the address
+    in memory of where the ref var is stored
+     */
+
+    public String toString(){
+        String str = ""; //str will get 'built up'
+        str = "The pizza with " + toppings +
+                " has " + numSlices + " slices costs " + price;
+        return str;
+    }
+
+
+//    public String toString() {
+//        return "Pizza{" +
+//                "toppings='" + toppings + '\'' +
+//                ", numSlices=" + numSlices +
+//                ", price=" + price +
+//                '}';
+//    }
 
     public String getToppings() {
         return toppings;
