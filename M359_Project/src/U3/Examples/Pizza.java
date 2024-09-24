@@ -15,7 +15,7 @@ public class Pizza {
     //equals method always returns a boolean
     //ALWAYS has one parameter of this class (pizza)
     public boolean equals(Pizza other) {
-        if (this.getToppings().equals(other.getToppings()) &&
+        if(this.getToppings().equals(other.getToppings()) &&
                 this.getPrice() == other.getPrice()) {
             return true;
         }
@@ -23,6 +23,29 @@ public class Pizza {
             return false;
         }
     }
+
+    public int compareTo(Pizza other){
+        if(this.price < other.price){
+            return -1;
+        }
+        else if(this.price > other.price){
+            return 1;
+        }
+        else{
+            return 0;
+        }
+    }
+    /*
+    public int compareTo(Pizza other){
+        return this.numSlices - other.numSlices;
+    }
+     */
+
+
+
+
+
+
     /*
     the toString method ALWAYS returns a string and
     takes NO parameters
