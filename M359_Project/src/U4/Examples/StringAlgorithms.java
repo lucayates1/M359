@@ -36,7 +36,7 @@ public class StringAlgorithms {
                monkey
         */
         String animal = "monkey";
-        for(int i = 0; i < animal.length(); i++){
+        for(int i = 0; i < animal.length(); i+= 2){
             System.out.println(animal.substring(0, i + 1));
         }
 
