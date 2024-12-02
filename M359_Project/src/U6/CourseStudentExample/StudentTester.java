@@ -44,6 +44,7 @@ public class StudentTester {
 
             schedule[i] = oneCourse;
         }
-        System.out.println(schedule);
+        Student student = new Student(name, schedule);
+        System.out.println(student);
     }
 }
