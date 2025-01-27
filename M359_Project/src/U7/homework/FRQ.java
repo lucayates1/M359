@@ -21,7 +21,7 @@ public class FRQ {
             }
         }
        output += word.charAt(word.length()-1);
-        
+
         if(word.length() == 1){
             output = word;
         }
