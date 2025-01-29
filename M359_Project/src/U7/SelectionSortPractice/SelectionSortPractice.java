@@ -30,6 +30,14 @@ public class SelectionSortPractice {
         sortByName(myClass);
         System.out.println("\nSorted by Name");
         printStudents(myClass);
+
+        sortByNameInsertion(myClass);
+        System.out.println("\nSorted by Name");
+        printStudents(myClass);
+
+        sortByAgeInsertion(myClass);
+        System.out.println("\nSorted by Age");
+        printStudents(myClass);
     }
 
 
@@ -48,7 +56,32 @@ public class SelectionSortPractice {
         }
 
     }
+    public static void sortByNameInsertion(ArrayList<Student> students){
+        for(int i = 1; i < students.size(); i++){
+            Student tempVal = students.get(i); //  put the value in the box
+            int currPos = i;
 
+            while( currPos > 0 && students.get(currPos - 1).getName().compareTo(tempVal.getName()) > 0 ){
+                students.set(currPos, students.get(currPos - 1)); //sliding over
+                currPos--; // decrease index by one to compare with the next value
+
+            }
+            students.set(currPos, tempVal);
+        }
+    }
+    public static void sortByAgeInsertion(ArrayList<Student> students){
+        for(int i = 1; i < students.size(); i++){
+            Student tempVal = students.get(i); //  put the value in the box
+            int currPos = i;
+
+            while( currPos > 0 && students.get(currPos - 1).getAge() > tempVal.getAge()){
+                students.set(currPos, students.get(currPos - 1)); //sliding over
+                currPos--; // decrease index by one to compare with the next value
+
+            }
+            students.set(currPos, tempVal);
+        }
+    }
 
     public static void sortByAge(ArrayList<Student> students) {
     for(int i = 0; i < students.size() - 1; i++){
